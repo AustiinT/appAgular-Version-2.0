@@ -79,7 +79,7 @@ export class DataService {
     return this.httpClient.get<Post[]>('https://apiclione.azurewebsites.net/api/CentrosBelleza/ListAll')
   }
   getUser() : Observable<any>{
-    return this.httpClient.get('https://apiclione.azurewebsites.net/api/Usuarios')
+    return this.httpClient.get('https://apiclione.azurewebsites.net/api/Usuarios/ListAll')
   }
  
   searchData(filtro) {

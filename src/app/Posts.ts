@@ -6,6 +6,8 @@ export interface Post{
     "descripcion": string;
     "imagen" : string;
     "direccion" :string;
+    "latitud"   :number;
+    "longitud" :number;
     
 }
 

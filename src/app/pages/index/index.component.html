@@ -127,12 +127,11 @@ Direccion: {{post.direccion}}
     <div class="squares square6"></div>
     <div class="squares square7"></div>
     
-    
-    <div class="container">
-      <div class="content-center ">
-         
+   <!--  <div class="container">
+      <div class="content-center "> -->
+         <br><br><br>
         <!--carousel normal-->
-  <div class="section">
+  
       <div class="container">
           <carousel [showIndicators]="false">
               <slide *ngFor="let post of posts"> 
@@ -158,11 +157,17 @@ Direccion: {{post.direccion}}
               
           </div>
         </div>
-      </slide>          
+        <br>
+        <agm-map [latitude]="post.latitud" [longitude]="post.longitud" [zoom]=zoom >
+          <agm-marker [latitude]="post.latitud" [longitude]="post.longitud"></agm-marker>
+        </agm-map>
+        <br><br>
+      </slide>  
+
     </carousel>
       </div>  
         
-    </div>
+    
     
        <!--  <form class="form-inline">
           <input  type="text" class="form-control form-control" style="font-size: 20px; width: 90%;"
@@ -190,69 +195,18 @@ Direccion: {{post.direccion}}
         
         </form> -->           
       </div>
-    </div>
-  </div>
-  <div class="container">
-  <p-panel header ="Usuarios" [style]="{width: '100%'}" >
-    
-    <table class="table table-striped">
-      <div>
-     <p-column [filter]="true" filterPlaceholder="type a project"></p-column>
-      <p-menubar [model]="items"></p-menubar>
-    </div>
-    
-  <p-table [value]="PostUsers" [columns]="cols" [paginator]="true" [rows]="5">
-    <ng-template pTemplate="header" let-columns>
-        <tr>
-            <th *ngFor="let col of columns">
-              {{col.header}}
-            </th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-user let-columns="columns">
-        <tr>
-          <td>
-              <img src="{{user.imagen}}" style="width: 40px; height: 40px;">
-          </td>
-            <td *ngFor="let col of columns">
-                {{user[col.field]}}
-              </td>
-            <td >
-              <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
-                <i class="tim-icons icon-settings-gear-63"></i>
-            </button>
-            <button type="button" rel="tooltip" class="btn btn-danger btn-simple btn-icon btn-sm">
-                <i class="tim-icons icon-simple-remove"></i>
-            </button>
-            </td> 
-        </tr>
-    </ng-template>
-</p-table>
-</table>
-</p-panel>
-</div>
-      <br>
-      <br>  
+   <!--  </div>
+  </div> -->
+  
+     
          
     
   <!--Mapa Ubicacion-->
-  <agm-map [latitude]="lat" [longitude]="lng" >
+  <!-- <agm-map [latitude]="lat" [longitude]="lng" >
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
+  </agm-map> -->
 
-<!--galeria 
-<div class="container">
-  <div *ngFor="let post of posts">
-    <h2>{{post.idCentroBelleza}}</h2>
-    <h3>{{post.nombreSalon}}</h3>
-    <p>{{post.descripcion}}</p>
-    <p>{{post.direccion}}</p>
-    <img class="imag" [src]="post.imagen">
-  </div>
-</div>-->
-    
+
 
 </div>
 
-<!--Google Maps-->
-  

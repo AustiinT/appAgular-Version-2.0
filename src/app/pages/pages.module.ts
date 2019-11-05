@@ -50,7 +50,7 @@ import { AgmCoreModule } from '@agm/core';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAA5PYd8kZkAq7XQ8StRgG_7M7Rq2_9_bU'
+      apiKey: 'AIzaSyBPg7DxFO3LhOMtOsXR_XKF6HrkLqF6OUw'
     }),
     TableModule,
     PanelModule,
